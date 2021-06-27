@@ -157,6 +157,18 @@ rem RemoveLibrariesIconFromDesktop
 REM Reg.exe delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{031E4825-7B94-4dc3-B131-E946B44C8DD5}" /f
 REM Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /f
 
+rem powersaver
+powercfg -duplicatescheme a1841308-3541-4fab-bc81-f71556f20b4a
+rem high performance
+powercfg -duplicatescheme 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+rem ultimate performance
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+rem disables Telemetry
+REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection /v "Allow Telemetry" /t REG_DWORD /d 0 /f
+
+rem "Let me set a different input method for each app window"
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "UserPreferencesMask" /t REG_BINARY /d "9E1E078092000000" /f
+
 
 
 Exit
@@ -169,3 +181,6 @@ If Not %ERRORLEVEL% EQU 0 (
 )
 Cls
 goto:eof
+
+
+
