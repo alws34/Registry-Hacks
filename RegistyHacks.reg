@@ -2,7 +2,7 @@ Windows Registry Editor Version 5.00
 
 ;add recycle bin to file explorer
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}]
-
+;---------------------------------------------------------------------------
 ;Add_Shift+Open_command_window_here
 [HKEY_CLASSES_ROOT\Directory\shell\cmd2]
 @="@shell32.dll,-8506"
@@ -42,7 +42,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
-
+;---------------------------------------------------------------------------
 ;Add_Take_Ownership_to_Context_menu
 [HKEY_CLASSES_ROOT\*\shell\runas]
 @="Take Ownership"
@@ -59,11 +59,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Directory\shell\runas\command]
 @="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
 "IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
-
+;---------------------------------------------------------------------------
 ;AddLibrariesIconToDesktop
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
 "{031E4825-7B94-4dc3-B131-E946B44C8DD5}"=dword:00000000
-
+;---------------------------------------------------------------------------
 ;AddRegeditToControlPanel
 [HKEY_CLASSES_ROOT\CLSID\{77708248-f839-436b-8919-527c410f48b9}]
 @="Registry Editor"
@@ -84,7 +84,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{77708248-f839-436b-8919-527c410f48b9}]
 @="Add Registry Editor to Control Panel"
-
+;---------------------------------------------------------------------------
 ;copy_as_path.reg
 [HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath]
 "CanonicalName"="{707C7BC6-685A-4A4D-A275-3966A5A3EFAA}"
@@ -101,23 +101,23 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoInternetOpenWith"=dword:00000001
-
+;---------------------------------------------------------------------------
 ;EnableCommandPromptHereAlways.reg
 [HKEY_CLASSES_ROOT\Drive\shell\cmd]
 "Extended"=-
 
 [HKEY_CLASSES_ROOT\Directory\shell\cmd]
 "Extended"=-
-
+;---------------------------------------------------------------------------
 ;Remove_3D_Objects_Folder_(64-bit_Windows).reg
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
-
+;---------------------------------------------------------------------------
 ;Remove_Shortcut_Text.reg
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 "link"=hex:00,00,00,00
-
+;---------------------------------------------------------------------------
 ;Web_Searches_OFF.reg
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
 "BingSearchEnabled"=dword:00000000
@@ -129,12 +129,11 @@ Windows Registry Editor Version 5.00
 
 ;[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}]
 ;"System.IsPinnedToNameSpaceTree"=dword:00000000
-
+;---------------------------------------------------------------------------
 ;Add_Control_Panel_Icon_View_to_File_Explorer.reg
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{21EC2020-3AEA-1069-A2DD-08002B30309D}]
-
+;---------------------------------------------------------------------------
 ;Add_Open_command_window_here.reg
-
 [HKEY_CLASSES_ROOT\Directory\shell\cmd2]
 @="@shell32.dll,-8506"
 "Extended"=-
@@ -143,7 +142,6 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\Directory\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
-
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd2]
 @="@shell32.dll,-8506"
@@ -154,7 +152,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
 
-
 [HKEY_CLASSES_ROOT\Drive\shell\cmd2]
 @="@shell32.dll,-8506"
 "Extended"=-
@@ -164,7 +161,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Drive\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
 
-
 [HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2]
 @="@shell32.dll,-8506"
 "Extended"=-
@@ -173,20 +169,18 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
-
-Add_Open_With_Notepad++_to_Context_Menu.reg.reg
-
+;---------------------------------------------------------------------------
+;Add_Open_With_Notepad++_to_Context_Menu.reg.reg
 [HKEY_CLASSES_ROOT\*\shell\Open with Notepad\command]
 @="C:\Program Files\Notepad++\notepad++.exe %1"
-
+;---------------------------------------------------------------------------
 ;DisableInternetOpenWith.reg
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoInternetOpenWith"=dword:00000001
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoInternetOpenWith"=dword:00000001
-
+;---------------------------------------------------------------------------
 ;AddRegeditToControlPanel.reg
 [HKEY_CLASSES_ROOT\CLSID\{77708248-f839-436b-8919-527c410f48b9}]
 @="Registry Editor"
