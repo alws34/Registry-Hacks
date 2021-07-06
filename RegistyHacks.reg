@@ -1,7 +1,7 @@
 Windows Registry Editor Version 5.00
 
 ;automatically log in on windows 10 with microsoft account
-;DO THIS ONLY I YOU KNOW WHAT YOU ARE DOING. THIS IS UNSECURED AND UNSAFE.
+;DO THIS ONLY IF YOU KNOW WHAT YOU ARE DOING. THIS IS UNSECURED AND UNSAFE.
 ;[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
 ;"AutoAdminLogon"="1"
 ;"DefaultDomainName"=""
