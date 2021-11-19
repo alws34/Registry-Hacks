@@ -2,6 +2,11 @@
 Title Reg Converter v1.2 & Color 1A
 cd %systemroot%\system32
 call :IsAdmin
+
+rem windows 11 - restore context menu
+Reg.exe delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{031E4825-7B94-4dc3-B131-E946B44C8DD5}" /f
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /f
+
 rem add copy as path from context menu to any file.
 Reg.exe add "HKCR\Allfilesystemobjects\shell\windows.copyaspath" /v "CanonicalName" /t REG_SZ /d "{707C7BC6-685A-4A4D-A275-3966A5A3EFAA}" /f
 Reg.exe add "HKCR\Allfilesystemobjects\shell\windows.copyaspath" /v "CommandStateHandler" /t REG_SZ /d "{3B1599F9-E00A-4BBF-AD3E-B3F99FA87779}" /f

@@ -13,6 +13,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}]
 
 ;---------------------------------------------------------------------------
+;Windows 11 - restore context menu
+;[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}]
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
+;---------------------------------------------------------------------------
 ;Add_Shift+Open_command_window_here
 [HKEY_CLASSES_ROOT\Directory\shell\cmd2]
 @="@shell32.dll,-8506"
