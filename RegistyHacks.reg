@@ -75,8 +75,8 @@ Windows Registry Editor Version 5.00
 
 ;---------------------------------------------------------------------------
 ;AddLibrariesIconToDesktop
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
-"{031E4825-7B94-4dc3-B131-E946B44C8DD5}"=dword:00000000
+;[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+;"{031E4825-7B94-4dc3-B131-E946B44C8DD5}"=dword:00000000
 
 ;---------------------------------------------------------------------------
 ;AddRegeditToControlPanel
