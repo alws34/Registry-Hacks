@@ -1,23 +1,36 @@
 Windows Registry Editor Version 5.00
 
-;automatically log in on windows 10 with microsoft account
+;automatically log in - on windows 10/11 *with* microsoft account
 ;DO THIS ONLY IF YOU KNOW WHAT YOU ARE DOING. THIS IS UNSECURED AND UNSAFE.
+
 ;[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
 ;"AutoAdminLogon"="1"
-;"DefaultDomainName"=""
-;"DefaultUserName"=""
-;"DefaultPassword"=""
+;"DefaultDomainName"="<place your domain name here>"
+;"DefaultUserName"="<place your username here (you microsoft account email will work)>"
+;"DefaultPassword"="<place your microsoft account password here>"
 
 ;---------------------------------------------------------------------------
 ;add recycle bin to file explorer
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}]
 
 ;---------------------------------------------------------------------------
-;Windows 11 - restore context menu
+;Windows 11 - restore win 10 context menu
 ;[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}]
 [HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
 @=""
 ;---------------------------------------------------------------------------
+
+; Sets the default Drag & Drop action to be "move".
+; credit to:
+; https://github.com/runxel/registry-hacks
+
+;; [HKEY_CLASSES_ROOT\*]
+;; "DefaultDropEffect"=dword:00000002
+
+;; [HKEY_CLASSES_ROOT\AllFilesystemObjects]
+;; "DefaultDropEffect"=dword:00000002
+;---------------------------------------------------------------------------
+
 ;Add_Shift+Open_command_window_here
 [HKEY_CLASSES_ROOT\Directory\shell\cmd2]
 @="@shell32.dll,-8506"
@@ -111,7 +124,7 @@ Windows Registry Editor Version 5.00
 "InvokeCommandOnSelection"=dword:00000001
 "MUIVerb"="@shell32.dll,-30329"
 "VerbHandler"="{f3d06e7c-1e45-4a26-847e-f9fcdee59be0}"
-"VerbName"="copyaspath"
+"VerbName"="Copy full path"
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoInternetOpenWith"=dword:00000001
 
@@ -192,7 +205,7 @@ Windows Registry Editor Version 5.00
 @="cmd.exe /s /k pushd \"%V\""
 
 ;---------------------------------------------------------------------------
-;Add_Open_With_Notepad++_to_Context_Menu.reg.reg
+;add "p[en with notepad++" to context menu *make sure the path is correct
 [HKEY_CLASSES_ROOT\*\shell\Open with Notepad\command]
 @="C:\Program Files\Notepad++\notepad++.exe %1"
 
