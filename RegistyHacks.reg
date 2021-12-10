@@ -124,7 +124,7 @@ Windows Registry Editor Version 5.00
 "InvokeCommandOnSelection"=dword:00000001
 "MUIVerb"="@shell32.dll,-30329"
 "VerbHandler"="{f3d06e7c-1e45-4a26-847e-f9fcdee59be0}"
-"VerbName"="Copy full path"
+"VerbName"="copyaspath"
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoInternetOpenWith"=dword:00000001
 
